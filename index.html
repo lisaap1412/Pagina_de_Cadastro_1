@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Cadastre-se</title>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="img-box">
+        <img src="./img/logo.png" alt="" />
+      </div>
+      <div class="form-box">
+        <h2>Cadastre-se</h2>
+        <p>
+          Ir para o site 
+          <a href="https://www.amikosolucoes.com"> Entrar </a>
+        </p>
+        <form action="#">
+          <div class="input-group">
+            <label for="id"> Seção</label>
+            <input
+              type="text"
+              id="id-input"
+              placeholder="Digite o ID"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="cliente">Cliente</label>
+            <input
+              type="text"
+              id="cliente-input"
+              placeholder="Digite o nome do Cliente"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="hospital">Hospital</label>
+            <input
+              type="text"
+              id="hospital-input"
+              placeholder="Digite o nome do Hospital"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="quarto">Quarto</label>
+            <input
+              type="number"
+              id="quarto-input"
+              placeholder="Digite o número do Quarto"
+              required
+              min="0"
+            />
+          </div>
+
+          <div class="input-group w50">
+            <button type="button" class="botao-listar" data-modal="abre">
+              Listar
+            </button>
+          </div>
+
+          <div class="input-group w50">
+            <button type="button" data-modal="abrir">
+              Editar
+            </button>
+          </div>
+
+          <div class="input-group w50">
+            <button type="button" data-modal="abri">
+              Deletar
+            </button>
+          </div>
+
+          <ul id="task-list"></ul>
+          <div class="input-group">
+            <button type="button" class="botao-salvar">Enviar Dados</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section class="modal-containerr" data-modal="containerr">
+      <div class="modall">
+        <button data-modal="feche" class="feche">X</button>
+        <form action="">
+          <label for="text">Lista de Pacientes</label>
+          <ul id="lista-registros">
+          </ul>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="id">Seção para Editar</label>
+          <input
+            type="text"
+            for="id"
+            id="id"
+            placeholder="Digite o id a se editado"
+          />
+          <label for="cliente">Cliente para Editar</label>
+          <input
+            type="text"
+            for="cliente"
+            id="cliente"
+            placeholder="Digite o nome do cliente a se editado"
+          />
+          <label for="hospital">Hospital para Editar</label>
+          <input
+            type="text"
+            for="hospital"
+            id="hospital"
+            placeholder="Digite o o nome do hospital a se editado"
+          />
+          <label for="quarto">Quarto para Editar</label>
+          <input
+            type="text"
+            for="quarto"
+            id="quarto"
+            placeholder="Digite o numero do quarto a se editado"
+          />
+          <button type="submit" class="botao-editar" >Editar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal-containe" data-modal="containe">
+      <div class="moda">
+        <button data-modal="fecha" class="fecha">X</button>
+        <form action="">
+          <label for="text">Id para Deletar</label>
+          <input
+            type="text"
+            for="text-edit"
+            id="text-edti"
+            placeholder="Digite o id para deletar"
+          />
+          <button type="submit" class="botao-deletar">Deletar</button>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
